@@ -2,8 +2,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from pathlib import Path
 
-# === AYAR ===
-student_id_last_two = 42  # BURAYI değiştir (son 2 hane)
+
+student_id_last_two = 41  
 
 A = 1.0
 f0 = student_id_last_two + 1
@@ -58,15 +58,21 @@ anomaly[start:end] += 3 * np.sin(2*np.pi*40*f0*t[start:end])
 np.save("data/rc_signal.npy", anomaly)
 
 # === PLOT ===
-plt.figure(figsize=(10,4))
+plt.figure(figsize=(10, 4))
 
-plt.plot(t[0:1000], anomaly[0:1000], label="Normal")
-plt.plot(t[start:end], anomaly[start:end], label="Anomaly")
+normal_start = int(20 * samples_per_period)
+normal_end = int(25 * samples_per_period)
+
+plt.plot(t[normal_start:normal_end], anomaly[normal_start:normal_end], label="Normal noisy signal")
+plt.plot(t[start:end], anomaly[start:end], label="Anomaly spike")
 
 plt.legend()
-plt.title("RC Signal with Anomaly")
+plt.xlabel("Time")
+plt.ylabel("Voltage")
+plt.title("RC Signal with Noise and Anomaly")
 
-plt.savefig("data/data_feed.png")
+plt.tight_layout()
+plt.savefig("data_feed.png", dpi=150)
 plt.show()
 
 print("Done")

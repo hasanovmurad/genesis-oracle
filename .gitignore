@@ -10,4 +10,4 @@ wheels/
 .venv
 
 # Data files
-data/*.npy
+data/
