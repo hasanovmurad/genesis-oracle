@@ -1,3 +1,17 @@
+# Genesis Oracle
+
+## Week 2 – Keras + RC Filter
+
+- Keras 3 with JAX backend ✔
+- Fourier square wave generation ✔
+- RC low-pass filtering ✔
+- Noise + anomaly injection ✔
+
+See:
+- data_feed.png
+- src/data_generator.py
+
+
 # Agent Simulation Report
 
 ## Execution Summary
