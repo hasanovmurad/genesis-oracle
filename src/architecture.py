@@ -68,6 +68,100 @@ class PhysicsAutoencoder(keras.Model):
         encoded = self.encoder(inputs)
         decoded = self.decoder(encoded)
         return decoded
+#------------------------------------------------------------------------------------------
+
+
+
+class ConvSignalEncoder(layers.Layer):
+    """
+    Convolutional encoder for 1D time-series windows.
+
+    Input shape:
+        (batch_size, 50, 1)
+
+    Output shape:
+        (batch_size, 13, 8)
+    """
+
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.conv1 = layers.Conv1D(
+            filters=16,
+            kernel_size=3,
+            strides=2,
+            padding="same",
+            activation="relu"
+        )
+        self.conv2 = layers.Conv1D(
+            filters=8,
+            kernel_size=3,
+            strides=2,
+            padding="same",
+            activation="relu"
+        )
+
+    def call(self, inputs):
+        x = self.conv1(inputs)   # (batch, 50, 1) -> (batch, 25, 16)
+        x = self.conv2(x)        # (batch, 25, 16) -> (batch, 13, 8)
+        return x
+
+
+class ConvSignalDecoder(layers.Layer):
+    """
+    Convolutional decoder for reconstructing 1D time-series windows.
+
+    Input shape:
+        (batch_size, 13, 8)
+
+    Output shape:
+        (batch_size, 50, 1)
+    """
+
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.deconv1 = layers.Conv1DTranspose(
+            filters=16,
+            kernel_size=3,
+            strides=2,
+            padding="same",
+            activation="relu"
+        )
+        self.deconv2 = layers.Conv1DTranspose(
+            filters=1,
+            kernel_size=3,
+            strides=2,
+            padding="same"
+        )
+        self.crop = layers.Cropping1D(cropping=(1, 1))
+
+    def call(self, inputs):
+        x = self.deconv1(inputs)   # (batch, 13, 8) -> approximately (batch, 26, 16)
+        x = self.deconv2(x)        # (batch, 26, 16) -> approximately (batch, 52, 1)
+        x = self.crop(x)           # (batch, 52, 1) -> (batch, 50, 1)
+        return x
+
+
+class ConvPhysicsAutoencoder(keras.Model):
+    """
+    Conv1D Autoencoder for RC time-series anomaly detection.
+    """
+
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.encoder = ConvSignalEncoder()
+        self.decoder = ConvSignalDecoder()
+
+    def call(self, inputs):
+        # Original dense model used input shape (batch, 50).
+        # Conv1D expects (batch, timesteps, channels), so we add one channel dimension.
+        if len(inputs.shape) == 2:
+            inputs = keras.ops.expand_dims(inputs, axis=-1)
+
+        encoded = self.encoder(inputs)
+        decoded = self.decoder(encoded)
+
+        return decoded
+#------------------------------------------------------------------------------------------
 
 if __name__ == "__main__":
     # Test block
@@ -95,3 +189,12 @@ if __name__ == "__main__":
     print(f"Output shape: {sample_output.shape}")
     print("\nModel Summary:")
     model.summary()
+    print("\nBuilding ConvPhysicsAutoencoder...")
+    conv_model = ConvPhysicsAutoencoder()
+
+    conv_output = conv_model(sample_input)
+
+    print(f"Conv Input shape:  {sample_input.shape}")
+    print(f"Conv Output shape: {conv_output.shape}")
+    print("\nConv Model Summary:")
+    conv_model.summary()
