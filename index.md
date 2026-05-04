@@ -25,3 +25,13 @@ The script simulates two distinct physical systems:
 2. **Radioactive Decay:** Simulated using a first-order differential equation modeling exponential decay over time, with a decay constant $\alpha = 0.5$.
 
 Both systems were integrated over a time interval of $t \in [0, 10]$ using SciPy's `solve_ivp` with the Runge-Kutta 4(5) method. The visual results were successfully plotted side-by-side in the output file.
+
+## Week 3: Oracle Awakens — Autoencoder Anomaly Detection
+
+In this experiment, I trained a subclassed Keras 3 autoencoder on the normal part of a synthetic RC-filter signal. The model learned to reconstruct normal signal windows with low error. When the corrupted anomaly region was passed through the model, the reconstruction error increased strongly, creating a clear spike above the anomaly threshold.
+
+![Autoencoder Reconstruction Loss](anomaly_detection_plot.png)
+
+### Conv1D Refactoring
+
+The dense autoencoder was extended with a Conv1D-based architecture. Conv1D layers are better suited for time-series signals because they apply local filters across neighboring time steps. This helps the model capture local structures such as oscillations, short distortions, and voltage spikes while preserving temporal order.
