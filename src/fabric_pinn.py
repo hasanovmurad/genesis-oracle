@@ -1,6 +1,7 @@
 import jax
 import jax.numpy as jnp
 import optax
+import plotly.graph_objects as go
 from flax import linen as nn
 from pinn_data import generate_pinn_data
 
@@ -90,8 +91,8 @@ def total_loss(params, model, data):
 
     return loss_physics + loss_ic + loss_bc
 
-
-def train_step(params, opt_state, optimizer, model, data):
+@jax.jit
+def train_step(params, opt_state, data):
 
     loss_value, grads = jax.value_and_grad(
         lambda p: total_loss(p, model, data)
@@ -127,17 +128,50 @@ if __name__ == "__main__":
 
     opt_state = optimizer.init(params)
 
-    for epoch in range(100):
+    for epoch in range(5000):
 
         params, opt_state, loss = train_step(
             params,
             opt_state,
-            optimizer,
-            model,
             data,
         )
 
-        if epoch % 10 == 0:
+        if epoch % 500 == 0:
             print(
                 f"Epoch {epoch:03d} | Loss = {loss:.6f}"
             )
+
+    x_values = jnp.linspace(0.0, 1.0, 100)
+    t_values = jnp.linspace(0.0, 1.0, 100)
+
+    X, T = jnp.meshgrid(x_values, t_values)
+
+    x_flat = X.reshape(-1, 1)
+    t_flat = T.reshape(-1, 1)
+
+    U = model.apply(params, x_flat, t_flat)
+    U = U.reshape(100, 100)
+
+    fig = go.Figure(
+        data=[
+            go.Surface(
+                x=X,
+                y=T,
+                z=U,
+                colorscale="Inferno",
+            )
+        ]
+    )
+
+    fig.update_layout(
+        title="PINN Solution of the 1D Heat Equation",
+        scene=dict(
+            xaxis_title="Space x",
+            yaxis_title="Time t",
+            zaxis_title="Temperature u",
+        ),
+    )
+
+    fig.write_html("data/pinn_3d_fabric.html")
+
+    print("Saved interactive plot to data/pinn_3d_fabric.html")

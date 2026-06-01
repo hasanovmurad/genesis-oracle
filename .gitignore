@@ -10,4 +10,5 @@ wheels/
 .venv
 
 # Data files
-data/
+data/*
+!data/pinn_3d_fabric.html
