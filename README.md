@@ -40,6 +40,18 @@ The project combines physical system simulation, machine learning, anomaly detec
 * Flax neural network architecture
 * Explicit parameter management
 
+### Week 5 – The Fabric of Reality
+
+* Physics-Informed Neural Network (PINN) implementation
+* Mesh-free collocation sampling in space-time
+* Automatic differentiation using `jax.grad`
+* Physics residual minimization for the 1D heat equation
+* Initial Condition (IC) and Boundary Condition (BC) constraints
+* Optax-based optimization
+* Interactive Plotly 3D visualization
+* Exported HTML simulation for browser-based exploration
+
+
 ---
 
 ## Performance Results
@@ -72,13 +84,18 @@ genesis-oracle/
 │   ├── oracle_setup.py
 │   ├── legacy_swarm.py
 │   ├── jax_swarm.py
-│   └── flax_core.py
+│   ├── flax_core.py
+|   ├── pinn_data.py
+|   └── fabric_pinn.py
 │
 ├── docs/
-│   └── Ascension_Report.md
-│
+│   |── Ascension_Report.md
+|   ├── Fabric_Report.md
+|   └── fabric_surface.png
+|
 ├── data/
-│   └── rc_signal.npy
+|   ├── rc_signal.npy
+│   └── pinn_3d_fabric.html
 │
 ├── index.md
 ├── README.md
@@ -87,6 +104,16 @@ genesis-oracle/
 ```
 
 ---
+## Week 5 Results
+
+Physics-Informed Neural Networks were used to approximate the solution of the 1D heat equation over a continuous space-time domain.
+
+The resulting temperature manifold was visualized as an interactive Plotly 3D surface and exported as a standalone HTML file for browser-based exploration.
+
+See:
+
+* `docs/Fabric_Report.md`
+* `data/pinn_3d_fabric.html`
 
 ## Live Project
 

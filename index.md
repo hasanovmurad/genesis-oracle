@@ -10,24 +10,33 @@ Completed:
 * Week 2: Synthetic RC signal generation
 * Week 3: Autoencoder-based anomaly detection
 * Week 4: JAX acceleration and Flax migration
+* Week 5: Physics-Informed Neural Networks (PINNs) and 3D heat-equation visualization
 
-## Performance
+## Week 5 Highlights
 
-| Metric            |     Result |
-| ----------------- | ---------: |
-| Legacy Simulation | 2.766298 s |
-| JAX Simulation    | 0.040943 s |
-| Speedup           |     67.56× |
+* Mesh-free collocation sampling using JAX
+* Physics-Informed Neural Network (PINN) implemented in Flax
+* Automatic differentiation with `jax.grad`
+* Physics, Initial Condition, and Boundary Condition losses
+* Optax-based training loop
+* Interactive Plotly 3D visualization of the heat equation
+* Exported HTML simulation for browser-based exploration
 
 ## Technologies
 
 * Python
 * NumPy
 * JAX
-* Keras 3
 * Flax
+* Optax
+* Plotly
 * Google Colab
 * GitHub Pages
+
+## Reports
+
+* Week 4 Report: `docs/Ascension_Report.md`
+* Week 5 Report: `docs/Fabric_Report.md`
 
 ## Repository
 
