@@ -51,6 +51,35 @@ The project combines physical system simulation, machine learning, anomaly detec
 * Interactive Plotly 3D visualization
 * Exported HTML simulation for browser-based exploration
 
+### Week 6 – Chaos Engine
+
+Week 6 extends the project into stochastic system simulation and Monte Carlo modeling.
+
+Implemented components:
+
+- Classical NumPy Monte Carlo Pi estimation
+- JAX-based Monte Carlo revenue simulation with 1,000,000 paths
+- Expected revenue and 95% Value-at-Risk calculation
+- JAX compilation profiling
+- Markov Chain simulation of macro-economic states
+- Black Swan shock injection from day 180 to day 190
+- Swarm stress report
+
+Results:
+
+- Pi estimate: 3.142768
+- Classical Pi runtime: 1.087658 s
+- Expected revenue: 416021.97
+- VaR 95% threshold: 257700.36
+- JAX first run: 1.653376 s
+- JAX second run: 0.226458 s
+
+Generated assets:
+
+- `data/classical_pi_disp.png`
+- `data/revenue_dist.png`
+- `data/markov_states.png`
+- `docs/Swarm_Stress_Report.md`
 
 ---
 
@@ -86,15 +115,22 @@ genesis-oracle/
 │   ├── jax_swarm.py
 │   ├── flax_core.py
 |   ├── pinn_data.py
+|   ├── classical_pi.py
+|   ├── monte_carlo.py
+|   ├── markov_boss.py
 |   └── fabric_pinn.py
 │
 ├── docs/
 │   |── Ascension_Report.md
 |   ├── Fabric_Report.md
+|   ├── Swarm_Stress_Report.md
 |   └── fabric_surface.png
 |
 ├── data/
 |   ├── rc_signal.npy
+|   ├── classical_pi_disp.png
+|   ├── revenue_dist.png
+|   ├── markov_states.png
 │   └── pinn_3d_fabric.html
 │
 ├── index.md
