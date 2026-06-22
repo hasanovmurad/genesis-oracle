@@ -9,6 +9,3 @@ wheels/
 # Virtual environments
 .venv
 
-# Data files
-data/*
-!data/pinn_3d_fabric.html
