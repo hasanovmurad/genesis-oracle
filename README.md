@@ -102,7 +102,7 @@ The trained autoencoder identifies anomalies through increased reconstruction er
 
 ---
 
-## Repository Structure
+## Repository  Structure
 
 ```text
 genesis-oracle/

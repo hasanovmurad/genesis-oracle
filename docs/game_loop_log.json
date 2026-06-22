@@ -1,0 +1,77 @@
+[
+  {
+    "turn": 1,
+    "environment": {
+      "kappa": 1.65,
+      "temperature": 378.0,
+      "system_state": "BOILING"
+    },
+    "decision": {
+      "system_state": "BOILING",
+      "adjustment_action": "DECREASE",
+      "delta_value": 0.2,
+      "confidence_score": 0.95
+    },
+    "new_kappa": 1.45
+  },
+  {
+    "turn": 2,
+    "environment": {
+      "kappa": 1.45,
+      "temperature": 354.0,
+      "system_state": "BOILING"
+    },
+    "decision": {
+      "system_state": "BOILING",
+      "adjustment_action": "DECREASE",
+      "delta_value": 0.2,
+      "confidence_score": 0.95
+    },
+    "new_kappa": 1.25
+  },
+  {
+    "turn": 3,
+    "environment": {
+      "kappa": 1.25,
+      "temperature": 330.0,
+      "system_state": "PERFECT"
+    },
+    "decision": {
+      "system_state": "PERFECT",
+      "adjustment_action": "HOLD",
+      "delta_value": 0.1,
+      "confidence_score": 0.95
+    },
+    "new_kappa": 1.25
+  },
+  {
+    "turn": 4,
+    "environment": {
+      "kappa": 1.25,
+      "temperature": 330.0,
+      "system_state": "PERFECT"
+    },
+    "decision": {
+      "system_state": "PERFECT",
+      "adjustment_action": "HOLD",
+      "delta_value": 0.1,
+      "confidence_score": 0.95
+    },
+    "new_kappa": 1.25
+  },
+  {
+    "turn": 5,
+    "environment": {
+      "kappa": 1.25,
+      "temperature": 330.0,
+      "system_state": "PERFECT"
+    },
+    "decision": {
+      "system_state": "PERFECT",
+      "adjustment_action": "HOLD",
+      "delta_value": 0.1,
+      "confidence_score": 1.0
+    },
+    "new_kappa": 1.25
+  }
+]
