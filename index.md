@@ -1,45 +1,133 @@
 # Genesis Oracle
 
-Project Genesis is a semester-long modeling and simulation project developed for the course **Angewandte Modellierung und Systemsimulation (SoSe 2026)**.
+Project Genesis is a semester-long research and engineering project developed for **Angewandte Modellierung und Systemsimulation (SoSe 2026)**.
 
-## Current Status
+The project explores the evolution from classical physical simulation toward AI-assisted autonomous systems using:
 
-Completed:
-
-* Week 1: Environment and project setup
-* Week 2: Synthetic RC signal generation
-* Week 3: Autoencoder-based anomaly detection
-* Week 4: JAX acceleration and Flax migration
-* Week 5: Physics-Informed Neural Networks (PINNs) and 3D heat-equation visualization
-
-## Week 5 Highlights
-
-* Mesh-free collocation sampling using JAX
-* Physics-Informed Neural Network (PINN) implemented in Flax
-* Automatic differentiation with `jax.grad`
-* Physics, Initial Condition, and Boundary Condition losses
-* Optax-based training loop
-* Interactive Plotly 3D visualization of the heat equation
-* Exported HTML simulation for browser-based exploration
-
-## Technologies
-
-* Python
 * NumPy
+* SciPy
 * JAX
 * Flax
+* Keras 3
 * Optax
-* Plotly
-* Google Colab
-* GitHub Pages
+* Gemini API
+* Agentic Engineering
+* Retrieval-Augmented Generation (RAG)
 
-## Reports
+---
 
-* Week 4 Report: `docs/Ascension_Report.md`
-* Week 5 Report: `docs/Fabric_Report.md`
+# Project Timeline
 
-## Repository
+## Week 1 – Agentic Awakening
 
-GitHub Repository:
+* Environment setup
+* Gemini CLI integration
+* Continuous system simulation
+* RL circuit modeling
+* Autonomous reporting agents
+
+---
+
+## Week 2 – Genesis Vault
+
+* GitHub workflow
+* uv dependency management
+* Fourier synthesis
+* RC filter simulation
+* Synthetic anomaly generation
+
+---
+
+## Week 3 – Oracle Awakens
+
+* Autoencoder architecture
+* Keras 3 + JAX backend
+* Anomaly detection
+* Reconstruction-loss monitoring
+
+![Autoencoder Reconstruction Loss](anomaly_detection_plot.png)
+
+---
+
+## Week 4 – Silicon Ascension
+
+* Massive oscillator simulation
+* JAX vectorization
+* JIT compilation
+* Automatic differentiation
+* Flax neural architectures
+
+Performance:
+
+| Metric        | Result |
+| ------------- | ------ |
+| NumPy Runtime | 2.77 s |
+| JAX Runtime   | 0.04 s |
+| Speedup       | 67.56× |
+
+---
+
+## Week 5 – Fabric of Reality
+
+* Physics-Informed Neural Networks
+* Heat equation approximation
+* Mesh-free collocation
+* Plotly 3D visualization
+
+---
+
+## Week 6 – Chaos Engine
+
+* Monte Carlo Pi estimation
+* Revenue-risk simulation
+* Value-at-Risk analysis
+* Markov Chain modeling
+* Black Swan events
+
+Generated Assets:
+
+![Pi Estimation](data/classical_pi_disp.png)
+
+![Revenue Distribution](data/revenue_dist.png)
+
+![Markov States](data/markov_states.png)
+
+---
+
+## Week 7 – Cerebral Nexus
+
+* Gemini API integration
+* Visual anomaly auditing
+* Structured JSON control loops
+* Prompt injection defense
+* Cognitive simulation pipelines
+
+Reports:
+
+* Cerebral_Nexus_Report.md
+
+---
+
+## Week 8 – Sovereign Sentinel
+
+* Local AI deployment concepts
+* Queue simulation
+* Closed-loop autonomous control
+* Local RAG architecture
+* SOP retrieval system
+
+Reports:
+
+* Sovereign_Sentinel_Report.md
+
+---
+
+# Repository
+
+GitHub:
 
 https://github.com/hasanovmurad/genesis-oracle
+
+GitHub Pages:
+
+https://hasanovmurad.github.io/genesis-oracle/
