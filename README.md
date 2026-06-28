@@ -86,6 +86,15 @@ The project explores the transition from classical physical simulation to AI-ass
 * Local Retrieval-Augmented Generation (RAG)
 * SOP-based decision support
 
+
+### Week 9 – Autonomous Engineer
+
+* JAX Mandelbrot simulation
+* Manual LLM-guided fractal exploration
+* Autonomous tool-calling agent loop
+* Gemma-Skill packaging
+* Dynamic skill loading
+
 ---
 
 ## Performance Highlights
@@ -106,6 +115,7 @@ The project explores the transition from classical physical simulation to AI-ass
 * Swarm_Stress_Report.md
 * Cerebral_Nexus_Report.md
 * Sovereign_Sentinel_Report.md
+* Autonomous_Engineer_Report.md
 
 ---
 

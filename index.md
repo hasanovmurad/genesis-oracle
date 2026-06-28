@@ -13,6 +13,8 @@ The project explores the evolution from classical physical simulation toward AI-
 * Gemini API
 * Agentic Engineering
 * Retrieval-Augmented Generation (RAG)
+* Function Calling
+* Gemma Skills
 
 ---
 
@@ -116,18 +118,35 @@ Reports:
 * Local RAG architecture
 * SOP retrieval system
 
+
 Reports:
 
 * Sovereign_Sentinel_Report.md
 
+
 ---
 
-# Repository
+## Week 9 – Autonomous Engineer
 
-GitHub:
+* JAX Mandelbrot simulation
+* Manual AI-guided fractal exploration
+* Autonomous tool-calling loop
+* Gemma-Skill packaging
+* Dynamic skill loading
+* Autonomous parameter optimization
+
+Reports:
+
+* Autonomous_Engineer_Report.md
+
+---
+
+## Repository
+
+GitHub Repository
 
 https://github.com/hasanovmurad/genesis-oracle
 
-GitHub Pages:
+GitHub Pages
 
 https://hasanovmurad.github.io/genesis-oracle/
