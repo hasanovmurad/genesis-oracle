@@ -1,0 +1,30 @@
+{
+  "name": "simulate_mandelbrot",
+  "description": "Runs a Mandelbrot simulation for a given center coordinate and zoom level.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "center_real": {
+        "type": "number",
+        "description": "Real coordinate of the Mandelbrot center."
+      },
+      "center_imag": {
+        "type": "number",
+        "description": "Imaginary coordinate of the Mandelbrot center."
+      },
+      "zoom": {
+        "type": "number",
+        "description": "Zoom factor."
+      },
+      "max_iterations": {
+        "type": "integer",
+        "description": "Maximum escape iterations."
+      }
+    },
+    "required": [
+      "center_real",
+      "center_imag",
+      "zoom"
+    ]
+  }
+}
