@@ -95,6 +95,15 @@ The project explores the transition from classical physical simulation to AI-ass
 * Gemma-Skill packaging
 * Dynamic skill loading
 
+### Week 10 – Cognitive Core
+
+* Google ADK integration
+* Observer-Prime agent
+* Native state tracking
+* ADK Web UI
+* Autonomous tool calling
+* Reactor stabilization agent
+
 ---
 
 ## Performance Highlights
@@ -116,6 +125,7 @@ The project explores the transition from classical physical simulation to AI-ass
 * Cerebral_Nexus_Report.md
 * Sovereign_Sentinel_Report.md
 * Autonomous_Engineer_Report.md
+* ADK_Report.md
 
 ---
 

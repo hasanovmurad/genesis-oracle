@@ -141,6 +141,22 @@ Reports:
 
 ---
 
+
+## Week 10 – Cognitive Core
+
+* Google ADK integration
+* Observer-Prime agent
+* Native memory/state tracking
+* ADK Web UI deployment
+* Reactor temperature control tool
+* Autonomous retry after safety warning
+
+Reports:
+
+* ADK_Report.md
+
+---
+
 ## Repository
 
 GitHub Repository
