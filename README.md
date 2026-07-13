@@ -104,6 +104,14 @@ The project explores the transition from classical physical simulation to AI-ass
 * Autonomous tool calling
 * Reactor stabilization agent
 
+### Week 11 – Scholar Prime
+
+* Google DeepMind Science Skills
+* OpenAlex integration
+* arXiv literature retrieval
+* Scientific parameter extraction
+* Academic research agent
+
 ---
 
 ## Performance Highlights
@@ -126,6 +134,7 @@ The project explores the transition from classical physical simulation to AI-ass
 * Sovereign_Sentinel_Report.md
 * Autonomous_Engineer_Report.md
 * ADK_Report.md
+* Scholar_Prime_Report.md
 
 ---
 

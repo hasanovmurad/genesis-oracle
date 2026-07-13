@@ -157,6 +157,21 @@ Reports:
 
 ---
 
+## Week 11 – Scholar Prime
+
+* Google DeepMind Science Skills
+* OpenAlex author resolution
+* arXiv literature retrieval
+* ADK research agent
+* Scientific parameter extraction
+* JSON export for simulation parameters
+
+Reports:
+
+* Scholar_Prime_Report.md
+
+---
+
 ## Repository
 
 GitHub Repository
