@@ -112,6 +112,16 @@ The project explores the transition from classical physical simulation to AI-ass
 * Scientific parameter extraction
 * Academic research agent
 
+### Week 12 – Agentic Protocol Stack
+
+* Multi-Agent System architecture
+* MCP infrastructure discovery
+* A2A agent communication
+* UCP commerce workflow
+* AP2 payment authorization
+* AG-UI event streaming
+* A2UI delivery dashboard
+
 ---
 
 ## Performance Highlights
@@ -135,6 +145,7 @@ The project explores the transition from classical physical simulation to AI-ass
 * Autonomous_Engineer_Report.md
 * ADK_Report.md
 * Scholar_Prime_Report.md
+* Protocol_Architecture_Design.pdf
 
 ---
 

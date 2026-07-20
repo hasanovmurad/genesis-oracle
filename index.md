@@ -172,6 +172,24 @@ Reports:
 
 ---
 
+---
+
+## Week 12 – Agentic Protocol Stack
+
+* Multi-Agent logistics system
+* MCP infrastructure access
+* A2A agent negotiation
+* UCP purchasing workflow
+* AP2 payment authorization
+* AG-UI streaming events
+* A2UI delivery dashboard
+
+Reports:
+
+* Protocol_Architecture_Design.pdf
+
+---
+
 ## Repository
 
 GitHub Repository

@@ -1,0 +1,50 @@
+{
+  "type": "card",
+  "id": "spreeland-delivery-status",
+  "title": "Spreeland Delivery Status",
+  "components": [
+    {
+      "type": "status",
+      "label": "Delivery",
+      "value": "Route evaluation in progress",
+      "severity": "info"
+    },
+    {
+      "type": "text",
+      "label": "Cargo",
+      "value": "2 tons of organic gherkins"
+    },
+    {
+      "type": "text",
+      "label": "Destination",
+      "value": "Cottbus"
+    },
+    {
+      "type": "metric",
+      "label": "River level",
+      "value": 1.82,
+      "unit": "m"
+    },
+    {
+      "type": "status",
+      "label": "Bridge B97",
+      "value": "Open",
+      "severity": "success"
+    },
+    {
+      "type": "status",
+      "label": "Payment mandate",
+      "value": "Owner approval required",
+      "severity": "warning"
+    },
+    {
+      "type": "button",
+      "id": "approve-purchase",
+      "label": "Approve purchase",
+      "action": {
+        "type": "submit",
+        "event": "ap2_mandate_approval"
+      }
+    }
+  ]
+}
